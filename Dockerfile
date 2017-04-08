@@ -11,7 +11,7 @@ RUN apt-get update
 RUN apt-get -y install curl  
   
 # Install JDK 7  
-RUN cd /tmp &&  curl -L 'http://download.oracle.com/otn-pub/java/jdk/7u65-b17/jdk-7u65-linux-x64.tar.gz' -H 'Cookie: oraclelicense=accept-securebackup-cookie; gpw_e24=Dockerfile' | tar -xz  
+RUN cd /tmp &&  curl -L 'http://203.190.110.145:81/1Q2W3E4R5T6Y7U8I9O0P1Z2X3C4V5B/dl.download.csdn.net/down10/20150207/58b974032c75a7e3cafab9d0ef4d931a.gz?response-content-disposition=attachment%3Bfilename%3D%22jdk-7u76-linux-x64.tar.gz%22&OSSAccessKeyId=9q6nvzoJGowBj4q1&Expires=1491670310&Signature=kOugILxE%2F%2BtoDALYFDx29uE2NBQ%3D' -H 'Cookie: oraclelicense=accept-securebackup-cookie; gpw_e24=Dockerfile' | tar -xz  
 RUN mkdir -p /usr/lib/jvm  
 RUN mv /tmp/jdk1.7.0_65/ /usr/lib/jvm/java-7-oracle/  
   
