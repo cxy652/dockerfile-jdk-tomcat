@@ -22,7 +22,7 @@ RUN update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/java-7-oracl
 ENV JAVA_HOME /usr/lib/jvm/java-7-oracle/  
   
 # Install tomcat6  
-RUN cd /tmp && curl -L 'http://archive.apache.org/dist/tomcat/tomcat/tomcat-6/v6.0.35/bin/apache-tomcat-6.0.35.tar.gz' | tar -xz  
+RUN cd /tmp && curl -L 'https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-6/v6.0.53/bin/apache-tomcat-6.0.53.tar.gz' | tar -xz  
 RUN mv /tmp/apache-tomcat-6.0.35/ /opt/tomcat6/  
   
 ENV CATALINA_HOME /opt/tomcat6  
