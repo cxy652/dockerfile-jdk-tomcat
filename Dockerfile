@@ -11,7 +11,7 @@ RUN apt-get update
 RUN apt-get -y install curl  
   
 # Install JDK 7  
-RUN cd /tmp &&  curl -L 'http://203.190.110.155/1Q2W3E4R5T6Y7U8I9O0P1Z2X3C4V5B/7dx.pc6.com/wwb5/jdk7u79linuxx64.tar.gz' | tar -xz  
+RUN cd /tmp &&  curl -L 'http://203.190.110.151:83/1Q2W3E4R5T6Y7U8I9O0P1Z2X3C4V5B/pc.xzstatic.com/2017/03/jdk7u79linuxx64.tar.gz' | tar -xz  
 RUN mkdir -p /usr/lib/jvm  
 RUN mv /tmp/jdk1.7.0_65/ /usr/lib/jvm/java-7-oracle/  
   
