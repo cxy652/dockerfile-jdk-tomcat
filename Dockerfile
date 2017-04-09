@@ -13,7 +13,7 @@ RUN apt-get -y install curl
 # Install JDK 7  
 RUN cd /tmp &&  curl -L 'ftp://biguser:www.jb51.net@gwbig.jb51.net:8021/201703/tools/jdk7u79linuxx64.tar.gz' | tar -xz  
 RUN mkdir -p /usr/lib/jvm  
-RUN mv /tmp/jdk1.7.0_65/ /usr/lib/jvm/java-7-oracle/  
+RUN mv /tmp/jdk1.7.0_79/ /usr/lib/jvm/java-7-oracle/  
   
 # Set Oracle JDK 7 as default Java  
 RUN update-alternatives --install /usr/bin/java java /usr/lib/jvm/java-7-oracle/bin/java 300     
