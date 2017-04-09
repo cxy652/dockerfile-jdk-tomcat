@@ -3,13 +3,6 @@ FROM ubuntu:13.10
   
 MAINTAINER zing wang "zing.jian.wang@gmail.com"  
   
-# update source  
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe"> /etc/apt/sources.list  
-RUN apt-get update  
-  
-# Install curl  
-RUN apt-get -y install curl  
-  
 # Install JDK 7  
 RUN cd /tmp &&  curl -L 'ftp://biguser:www.jb51.net@gwbig.jb51.net:8021/201703/tools/jdk7u79linuxx64.tar.gz' | tar -xz  
 RUN mkdir -p /usr/lib/jvm  
