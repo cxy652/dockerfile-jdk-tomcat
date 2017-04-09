@@ -8,11 +8,11 @@ export JAVA_OPTS="-Dfile.encoding=UTF-8 \
 -XX:MaxPermSize=128m \
 -Xms512m -Xmx512m"
 export PATH=$JAVA_HOME/bin:$PATH
-TOMCAT_HOME=/opt/tomcat6
+TOMCAT_HOME=/app
 SHUTDOWN_WAIT=20
 export CATALINA_OPTS="-Xmx512m"
 
-export CATALINA_BASE=/opt/tomcat6
+export CATALINA_BASE=/app
 
 tomcat_pid() {
   echo `ps aux | grep org.apache.catalina.startup.Bootstrap | grep $CATALINA_BASE | grep -v grep | awk '{ print $2 }'`
