@@ -23,16 +23,16 @@ ENV JAVA_HOME /usr/lib/jvm/java-7-oracle/
   
 # Install tomcat6  
 RUN cd /tmp && curl -L 'https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-6/v6.0.53/bin/apache-tomcat-6.0.53.tar.gz' | tar -xz  
-RUN mv /tmp/apache-tomcat-6.0.53/ /opt/tomcat6/  
+RUN mv /tmp/apache-tomcat-6.0.53/ /app/  
   
-ENV CATALINA_HOME /opt/tomcat6  
+ENV CATALINA_HOME /app  
 ENV PATH $PATH:$CATALINA_HOME/bin  
   
 ADD tomcat6.sh /etc/init.d/tomcat6  
 RUN chmod 755 /etc/init.d/tomcat6
   
 # Expose ports.  
-EXPOSE 8080  
+EXPOSE 80
   
 # Define default command.  
-ENTRYPOINT service tomcat6 start && tail -f /opt/tomcat6/logs/catalina.out 
+ENTRYPOINT service tomcat6 start && tail -f /app/logs/catalina.out 
