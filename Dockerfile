@@ -23,7 +23,7 @@ ENV JAVA_HOME /usr/lib/jvm/java-7-oracle/
   
 # Install tomcat6  
 RUN cd /tmp && curl -L 'https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-6/v6.0.53/bin/apache-tomcat-6.0.53.tar.gz' | tar -xz  
-RUN mv /tmp/apache-tomcat-6.0.35/ /opt/tomcat6/  
+RUN mv /tmp/apache-tomcat-6.0.53/ /opt/tomcat6/  
   
 ENV CATALINA_HOME /opt/tomcat6  
 ENV PATH $PATH:$CATALINA_HOME/bin  
